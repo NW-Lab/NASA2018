@@ -1,0 +1,29 @@
+﻿<Window x:Class="MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="Get EPIC Data" Height="350" Width="525">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30px"/>
+            <RowDefinition Height="30px"/>
+            <RowDefinition  Height="30px"/>
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <StackPanel Margin="5" Orientation="Horizontal" Grid.Row="0">
+            <TextBlock  x:Name="text2">API_KEY</TextBlock>
+            <TextBox x:Name="tbApiKey" Width="300"/>
+            <Button x:Name="btApiKey">Set</Button>
+        </StackPanel>
+        <StackPanel Margin="5"  Orientation="Horizontal" Grid.Row="1">
+            <TextBlock x:Name="text1">初期データはまだ読み込まれていません。</TextBlock>
+            <DatePicker x:Name="datepicker1"/>
+            <Button Name="Button1">Get Image Data</Button>
+        </StackPanel>
+        <TextBlock Margin="5" Grid.Row="2" TextWrapping="WrapWithOverflow">It takes several minutes to collect data after pressing the Get Image Data button. Please see the folder in the explorer progress status. When processing is completed, Dialog is displayed.</TextBlock>
+        <Viewbox Grid.Row="3">
+            <Image x:Name="Image1" Height="100" Width="100" />
+        </Viewbox>
+        
+    </Grid>
+    
+</Window>
